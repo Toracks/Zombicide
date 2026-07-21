@@ -379,6 +379,7 @@ body::after {
     align-items: center;
     justify-content: center;
     gap: 30px;
+    transition: opacity 0.3s ease;
 }
 
 .fullscreen-overlay.visible {
@@ -390,6 +391,7 @@ body::after {
     border-radius: 10px;
     box-shadow: 0px 0px 30px rgba(144, 241, 0, 0.8);
     cursor: default;
+    transition: transform 0.3s ease;
 }
 
 .pouvoirs-panel {
@@ -399,6 +401,7 @@ body::after {
     max-height: 80vh;
     gap: 10px;
     cursor: default;
+    transition: all;
 }
 
 .pouvoir-bloc {
