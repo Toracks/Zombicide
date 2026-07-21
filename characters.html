@@ -25,18 +25,19 @@
 
 
     <div class="page-content">
-         <div class="characters-container">
+        <div class="characters-container">
             <input type="text" id="search-bar" placeholder="Rechercher un personnage..." autocomplete="off">
 
             <div class="filtres-container">
-                <button class="filtre-btn filtre-btn-Melee" data-categorie="Melee">Melee</button>
-                <button class="filtre-btn filtre-btn-Mage" data-categorie="Mage">Mage</button>
-                <button class="filtre-btn filtre-btn-Distance" data-categorie="Distance">Distance</button>
-                <button class="filtre-btn filtre-btn-Other" data-categorie="Other">Other</button>
+                <button class="filtre-btn" data-categorie="Melee">Melee</button>
+                <button class="filtre-btn" data-categorie="Mage">Mage</button>
+                <button class="filtre-btn" data-categorie="Distance">Distance</button>
+                <button class="filtre-btn" data-categorie="Other">Other</button>
             </div>
 
             <div id="loader" class="loader"></div>
             <div id="characters-grid" class="characters-grid invisible"></div>
+            <div id="pouvoirs-panel" class="pouvoirs-panel"></div>
         </div>
     </div>
 

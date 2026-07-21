@@ -51,7 +51,7 @@ function afficherPersonnages(liste) {
             carte.appendChild(img);
         }
 
-        carte.addEventListener('click', () => afficherEnGrand(carte));
+        carte.addEventListener('click', () => afficherEnGrand(carte, p));
         grid.appendChild(carte);
     });
 }
@@ -70,18 +70,47 @@ function appliquerFiltres() {
     afficherPersonnages(resultats);
 }
 
-function afficherEnGrand(carteCliquee) {
+function afficherEnGrand(carteCliquee, personnage) {
     document.querySelectorAll('.carte-personnage').forEach(carte => {
         carte.classList.toggle('cachee', carte !== carteCliquee);
         carte.classList.toggle('agrandie', carte === carteCliquee);
     });
+
+    afficherPouvoirs(personnage);
+
     carteCliquee.addEventListener('click', reinitialiserAffichage, { once: true });
+}
+
+function afficherPouvoirs(personnage) {
+    const panel = document.getElementById('pouvoirs-panel');
+    panel.innerHTML = '';
+
+    personnage.pouvoirs.forEach(pouvoir => {
+        const bloc = document.createElement('div');
+        bloc.classList.add('pouvoir-bloc');
+
+        const titre = document.createElement('h4');
+        titre.textContent = pouvoir.nom;
+
+        const description = document.createElement('p');
+        description.textContent = pouvoir.description;
+
+        bloc.appendChild(titre);
+        bloc.appendChild(description);
+        panel.appendChild(bloc);
+    });
+
+    panel.classList.add('visible');
 }
 
 function reinitialiserAffichage() {
     document.querySelectorAll('.carte-personnage').forEach(carte => {
         carte.classList.remove('cachee', 'agrandie');
     });
+
+    const panel = document.getElementById('pouvoirs-panel');
+    panel.classList.remove('visible');
+    panel.innerHTML = '';
 }
 
 searchBar.addEventListener('input', appliquerFiltres);
