@@ -125,7 +125,7 @@ body::after {
 .sidebar:hover .separator {
     height: var(--separator-height);
     width: var(--separator-width);
-    background-color: rgba(144, 241, 0, 0.6);
+    background-color: rgba(113, 188, 1, 0.6);
     border-radius: 2px;
     margin-bottom: 10px;
 }
@@ -155,8 +155,8 @@ body::after {
     padding: 10px 15px;
     border-radius: 10px;
     border: 1px solid rgba(144, 241, 0, 0.6);
-    background-color: rgba(42, 42, 42, 0.6);
-    color: white;
+    background-color: rgba(215, 213, 213, 0.6);
+    color: rgb(0, 0, 0);
     font-family: Arial, sans-serif;
     margin-bottom: 20px;
 }
@@ -267,7 +267,7 @@ body::after {
     padding: 8px 16px;
     border-radius: 20px;
     border: 1px solid rgba(241, 0, 0, 0.6);
-    background-color: rgba(42, 42, 42, 0.6);
+    background-color: rgba(254, 252, 252, 0.6);
     color: white;
     font-family: Arial, sans-serif;
     cursor: pointer;
@@ -278,7 +278,7 @@ body::after {
     padding: 8px 16px;
     border-radius: 20px;
     border: 1px solid rgba(165, 0, 241, 0.6);
-    background-color: rgba(42, 42, 42, 0.6);
+    background-color: rgba(254, 252, 252, 0.6);
     color: white;
     font-family: Arial, sans-serif;
     cursor: pointer;
@@ -289,7 +289,7 @@ body::after {
     padding: 8px 16px;
     border-radius: 20px;
     border: 1px solid rgba(0, 76, 241, 0.6);
-    background-color: rgba(42, 42, 42, 0.6);
+    background-color: rgba(254, 252, 252, 0.6);
     color: white;
     font-family: Arial, sans-serif;
     cursor: pointer;
@@ -300,45 +300,13 @@ body::after {
     padding: 8px 16px;
     border-radius: 20px;
     border: 1px solid rgba(144, 241, 0, 0.3);
-    background-color: rgba(42, 42, 42, 0.6);
+    background-color: rgba(254, 252, 252, 0.6);
     color: white;
     font-family: Arial, sans-serif;
     cursor: pointer;
     transition: 0.2s ease;
 }
 
-.filtre-btn-Mage {
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid rgba(165, 0, 241, 0.6);
-    background-color: rgba(42, 42, 42, 0.6);
-    color: white;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.filtre-btn-Distance {
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid rgba(0, 76, 241, 0.6);
-    background-color: rgba(42, 42, 42, 0.6);
-    color: white;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.filtre-btn-Other {
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid rgba(241, 194, 0, 0.6);
-    background-color: rgba(42, 42, 42, 0.6);
-    color: white;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
 
 .filtre-btn-Melee:hover {
     background-color: rgba(241, 0, 0, 0.3);
