@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombicide-Survivants</title>
+    <link rel="stylesheet" id="theme-stylesheet" href="style-dark.css">
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar">
+        <img src="images/logo-zombicide.png" alt="Zombicide" class="logo">
+        <div class="separator"></div>
+        <a href="HTML.html" id="home" class="home"></a>
+        <div class="separator"></div>
+        <a href="play.html" id="play" class="play"></a>
+        <div class="separator"></div>
+        <a href="characters.html" id="characters" class="characters"></a>
+        <a href="tools.html" id="tools" class="tools"></a>
+        <a href="regles.html" id="regles" class="regles"></a>
+        <div class="separator"></div>
+        <a href="settings.html" id="settings" class="settings"></a>
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+    </div>
+
+
+    <div class="page-content">
+         <div class="characters-container">
+            <input type="text" id="search-bar" placeholder="Rechercher un personnage..." autocomplete="off">
+
+            <div class="filtres-container">
+                <button class="filtre-btn filtre-btn-Melee" data-categorie="Melee">Melee</button>
+                <button class="filtre-btn filtre-btn-Mage" data-categorie="Mage">Mage</button>
+                <button class="filtre-btn filtre-btn-Distance" data-categorie="Distance">Distance</button>
+                <button class="filtre-btn filtre-btn-Other" data-categorie="Other">Other</button>
+            </div>
+
+            <div id="loader" class="loader"></div>
+            <div id="characters-grid" class="characters-grid invisible"></div>
+        </div>
+    </div>
+
+
+    <script src="characters.js"></script>
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>
