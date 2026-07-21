@@ -156,7 +156,7 @@ body::after {
     border-radius: 10px;
     border: 1px solid rgba(144, 241, 0, 0.6);
     background-color: rgba(215, 213, 213, 0.6);
-    color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0, 1) !important;
     font-family: Arial, sans-serif;
     margin-bottom: 20px;
 }
@@ -268,7 +268,7 @@ body::after {
     border-radius: 20px;
     border: 1px solid rgba(241, 0, 0, 0.6);
     background-color: rgba(254, 252, 252, 0.6);
-    color: white;
+    color: black;
     font-family: Arial, sans-serif;
     cursor: pointer;
     transition: 0.2s ease;
@@ -279,7 +279,7 @@ body::after {
     border-radius: 20px;
     border: 1px solid rgba(165, 0, 241, 0.6);
     background-color: rgba(254, 252, 252, 0.6);
-    color: white;
+    color: black;
     font-family: Arial, sans-serif;
     cursor: pointer;
     transition: 0.2s ease;
@@ -290,7 +290,7 @@ body::after {
     border-radius: 20px;
     border: 1px solid rgba(0, 76, 241, 0.6);
     background-color: rgba(254, 252, 252, 0.6);
-    color: white;
+    color: black;
     font-family: Arial, sans-serif;
     cursor: pointer;
     transition: 0.2s ease;
@@ -301,7 +301,7 @@ body::after {
     border-radius: 20px;
     border: 1px solid rgba(144, 241, 0, 0.3);
     background-color: rgba(254, 252, 252, 0.6);
-    color: white;
+    color: black;
     font-family: Arial, sans-serif;
     cursor: pointer;
     transition: 0.2s ease;
