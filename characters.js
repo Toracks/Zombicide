@@ -95,14 +95,10 @@ function ouvrirVueAgrandie(personnage) {
     });
 
     overlay.classList.add('visible');
-    searchBar.classList.add('invisible');
-    filtresContainer.classList.add('invisible');
 }
 
 function fermerVueAgrandie() {
     overlay.classList.remove('visible');
-    searchBar.classList.remove('invisible');
-    filtresContainer.classList.remove('invisible');
 }
 
 overlay.addEventListener('click', (e) => {
