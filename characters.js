@@ -47,6 +47,7 @@ function afficherPersonnages(liste) {
             const placeholder = document.createElement('div');
             placeholder.classList.add('coming-soon');
             placeholder.textContent = 'Coming soon';
+            placeholder.textContent = p.character + ' - Coming soon'; // Remplace l'image
             carte.appendChild(placeholder);
         } else {
             const img = document.createElement('img');
