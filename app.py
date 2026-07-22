@@ -40,12 +40,24 @@ def api_personnages():
                     description = descriptions_pouvoirs.get(nom, "Description à venir")
                     pouvoirs.append({"nom": nom, "description": description})
 
+        pouvoirs_par_case = []
+        for colonne in ["Power 1", "Power 2", "Power 3", "Power 4", "Power 5", "Power 6", "Power 7"]:
+            valeur = row[colonne]
+            case = []
+            if pd.notna(valeur):
+                noms_capacites = [c.strip() for c in str(valeur).split("/")]
+                for nom in noms_capacites:
+                    description = descriptions_pouvoirs.get(nom, "Description à venir")
+                    case.append({"nom": nom, "description": description})
+            pouvoirs_par_case.append(case)
+
         personnages.append({
             "character": character,
             "id": id_perso,
             "image": f"Survivants/{character}-{id_perso}.webp",
             "categories": categories,
-            "pouvoirs": pouvoirs
+            "pouvoirs": pouvoirs,
+            "pouvoirs_par_case": pouvoirs_par_case
         })
 
     return jsonify(personnages)

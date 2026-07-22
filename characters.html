@@ -26,13 +26,23 @@
 
     <div class="page-content">
         <div class="characters-container">
-            <input type="text" id="search-bar" placeholder="Rechercher un personnage..." autocomplete="off">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Rechercher un survivant..." autocomplete="off">
+                <div class="mode-toggle-wrapper">
+                    <button id="mode-toggle" class="mode-toggle">▾</button>
+                    <div id="mode-menu" class="mode-menu invisible">
+                        <div class="mode-option" data-mode="survivant">Recherche par Survivant</div>
+                        <div class="mode-option" data-mode="capacite">Recherche par Capacité</div>
+                    </div>
+                </div>
+            </div>
 
             <div class="filtres-container">
                 <button class="filtre-btn-Melee" data-categorie="Melee">Melee</button>
                 <button class="filtre-btn-Mage" data-categorie="Mage">Mage</button>
                 <button class="filtre-btn-Distance" data-categorie="Distance">Distance</button>
                 <button class="filtre-btn-Other" data-categorie="Other">Other</button>
+                <button id="compare-toggle" class="compare-toggle-btn">Comparer</button>
             </div>
 
             <div id="loader" class="loader"></div>
@@ -40,10 +50,27 @@
         </div>
 
         <div id="fullscreen-overlay" class="fullscreen-overlay">
-            <img id="fullscreen-image" src="" alt="">
+            <div class="fullscreen-image-wrapper">
+                <img id="fullscreen-image" src="" alt="">
+                <button id="fullscreen-compare-btn" class="compare-toggle-carte invisible"></button>
+            </div>
             <div id="fullscreen-pouvoirs" class="pouvoirs-panel"></div>
         </div>
+
+        <div id="compare-overlay" class="fullscreen-overlay compare-overlay">
+            <div id="compare-cards" class="compare-cards"></div>
+        </div>
+
+        <div id="compare-bar" class="compare-bar invisible">
+            <span id="compare-count">0/4 sélectionnées</span>
+            <div class="compare-bar-actions">
+                <button id="compare-annuler" class="compare-bar-btn">Annuler</button>
+                <button id="compare-lancer" class="compare-bar-btn compare-bar-btn-principal">Comparer</button>
+            </div>
+        </div>
     </div>
+
+    
 
 
     <script src="characters.js"></script>
