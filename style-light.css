@@ -168,6 +168,10 @@ body::after {
 
 .carte-personnage {
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 .carte-personnage img {
@@ -453,4 +457,202 @@ body::after {
 
 .mode-option:hover {
     background-color: rgba(90, 150, 1, 0.7);
+}
+
+
+.compare-toggle-btn {
+    padding: 10px 16px;
+    border-radius: 10px;
+    margin-left: 550px;
+    border: 1px solid rgba(144, 241, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.compare-toggle-btn:hover {
+    background-color: rgba(144, 241, 0, 0.3);
+}
+
+.compare-toggle-btn.actif {
+    background-color: rgba(144, 241, 0, 0.8);
+    color: black;
+    font-weight: bold;
+}
+
+.compare-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-top: 3px solid rgba(144, 241, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    z-index: 15;
+    box-shadow: 0 -5px 10px rgba(144, 241, 0, 0.6);
+}
+
+.compare-bar.invisible {
+    display: none;
+}
+
+.compare-bar span {
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+.compare-bar-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.compare-bar-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(144, 241, 0, 0.6);
+    background-color: rgba(171, 171, 171, 0.6);
+    color: black;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.compare-bar-btn:hover {
+    background-color: rgba(144, 241, 0, 0.3);
+}
+
+.compare-bar-btn-principal {
+    background-color: rgba(144, 241, 0, 0.8);
+    color: black;
+    font-weight: bold;
+}
+
+.compare-bar-btn-principal:hover {
+    background-color: rgba(144, 241, 0, 1);
+}
+
+.compare-toggle-carte {
+    margin-top: 5px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(144, 241, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.compare-toggle-carte:hover:not(:disabled) {
+    background-color: rgba(144, 241, 0, 0.3);
+}
+
+.compare-toggle-carte.actif {
+    background-color: rgba(144, 241, 0, 0.8);
+    color: black;
+    font-weight: bold;
+}
+
+.compare-toggle-carte:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.fullscreen-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#fullscreen-compare-btn {
+    font-size: 1rem;
+    padding: 8px 20px;
+}
+
+.compare-overlay {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.compare-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.compare-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.compare-card img {
+    width: 30vh;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(144, 241, 0, 0.6);
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(42, 42, 42, 0.9);
+    border: 1px solid rgba(144, 241, 0, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.compare-table td {
+    padding: 6px 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(144, 241, 0, 0.2);
+}
+
+.compare-table tr:last-child td {
+    border-bottom: none;
+}
+
+.compare-table .label-cell {
+    color: rgba(144, 241, 0, 1);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.capacite-nom {
+    position: relative;
+    cursor: pointer;
+}
+
+.capacite-nom .tooltip {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(20, 20, 20, 0.98);
+    border: 1px solid rgba(144, 241, 0, 0.6);
+    border-radius: 8px;
+    padding: 8px 12px;
+    width: 200px;
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+    z-index: 30;
+}
+
+.capacite-nom:hover .tooltip {
+    display: block;
 }
