@@ -145,10 +145,7 @@ body::after {
     transition: 0.3s ease;
 }
 
-.characters-container {
-    padding: 20px 40px;
-    padding-left: 12vh;
-}
+
 
 #search-bar {
     flex: 1;
@@ -164,6 +161,20 @@ body::after {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+}
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carte-personnage {
+    animation: apparition 0.4s ease;
 }
 
 .carte-personnage {
@@ -206,6 +217,9 @@ body::after {
 
 .page-content {
     margin-left: 7vh;
+    padding: 20px 40px;
+    padding-left: 12vh;
+    box-sizing: border-box;
     transition: margin-left 0.3s ease;
 }
 
@@ -698,4 +712,55 @@ body::after {
 
 .capacite-nom:hover .tooltip {
     display: block;
+}
+
+.page-title {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    margin: 0 0 30px 0;
+    padding-top: 30px;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(42, 42, 42, 0.6);
+    border: 1px solid rgba(144, 241, 0, 0.6);
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+
+.setting-item label {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.setting-select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(144, 241, 0, 0.6);
+    background-color: rgba(27, 27, 27, 0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.setting-select:hover {
+    border-color: rgba(144, 241, 0, 1);
+}
+
+.setting-select:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(144, 241, 0, 0.6);
 }

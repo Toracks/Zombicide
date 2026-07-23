@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zombicide</title>
+    <title>Zombicide-Paramètres</title>
     <link rel="stylesheet" id="theme-stylesheet" href="style-dark.css">
 </head>
 
@@ -22,6 +22,24 @@
         <div class="separator"></div>
         <a href="settings.html" id="settings" class="settings" data-i18n="settings"></a>
     </div>
+
+    <div class="page-content">
+        <h1 class="page-title" data-i18n="titre_parametres">Paramètres</h1>
+        <div class="settings-container">
+            <div class="setting-item">
+                <label for="theme-select" data-i18n="label_theme">Thème :</label>
+                <select id="theme-select" class="setting-select">
+                    <option value="dark" data-i18n="option_sombre">Sombre</option>
+                    <option value="light" data-i18n="option_clair">Clair</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label for="language-select" data-i18n="label_langue">Langue :</label>
+                <select id="language-select" class="setting-select"></select>
+            </div>
+        </div>
+    </div>
+
 
     <script src="lang.js"></script>
     <script src="theme.js"></script>
