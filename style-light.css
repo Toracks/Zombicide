@@ -13,19 +13,20 @@ body{
     min-height: 100vh;
 }
 
-body::before {
-    content: "";
+
+#bg-layer {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 130%;
     background-image: url("images/Zombicide-BP.jpg");
     background-size: cover;
     background-position: center -60px;
     filter: blur(var(--bg-blur));
     transform: scale(1.1);
     z-index: -2;
+    will-change: transform;
 }
 
 body::after {
@@ -39,7 +40,6 @@ body::after {
     opacity: var(--bg-darkness);
     z-index: -1;
 }
-
 
 .sidebar {
     position: fixed;
@@ -496,10 +496,12 @@ body::after {
     padding: 15px 40px;
     z-index: 15;
     box-shadow: 0 -5px 10px rgba(144, 241, 0, 0.6);
+    transition: 0.3s ease;
 }
 
 .compare-bar.invisible {
     display: none;
+    transition: 0.3s ease;
 }
 
 .compare-bar span {
@@ -606,11 +608,27 @@ body::after {
 
 .compare-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     background-color: rgba(42, 42, 42, 0.9);
     border: 1px solid rgba(144, 241, 0, 0.6);
     border-radius: 10px;
-    overflow: hidden;
+}
+
+.compare-table tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+}
+
+.compare-table tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+}
+
+.compare-table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.compare-table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
 }
 
 .compare-table td {
