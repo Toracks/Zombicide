@@ -162,6 +162,8 @@ body::after {
     flex-wrap: wrap;
     gap: 15px;
 }
+
+
 @keyframes apparition {
     from {
         opacity: 0;
